@@ -5,6 +5,7 @@
 
 .selects-location {
     position: relative;
+    overflow: hidden;
 }
 
 .selects-location .overlay {
@@ -14,6 +15,11 @@
     height: 100%;
     position: absolute;
     background: rgba(0, 0, 0, 0.3);
+    transition: .3s;
+}
+
+.selects-location:hover .overlay{
+    height: 0;
 }
 
 .selects-location p {
