@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400;700&display=swap");
 
 :root {
   --primary-dark: #5651e5;
@@ -29,6 +29,11 @@ h2 {
   font-size: 2rem;
 }
 
+li:hover {
+  color: var(--primary-dark);
+  cursor: pointer;
+}
+
 .container {
   max-width: 1240px;
   margin: auto;
@@ -36,16 +41,28 @@ h2 {
 }
 
 button {
-  background-image: linear-gradient(45deg,var(--primary-dark) 0%, var(--primary-light) 100%);
+  background-image: linear-gradient(
+    45deg,
+    var(--primary-dark) 0%,
+    var(--primary-light) 100%
+  );
   border: 1px solid var(--primary-dark);
   color: #fff;
-  padding: .7rem 1.5rem;
+  padding: 0.7rem 1.5rem;
   border-radius: 8px;
   cursor: pointer;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  align-items: center;
+  transition: 0.3s ease-in;
 }
 
-
+button:hover {
+  background-image: linear-gradient(
+    45deg,
+    #6e6aee 30%,
+    var(--primary-dark) 70%
+  );
+}
 
 @media screen and (max-width: 940px) {
   h1 {
@@ -55,5 +72,3 @@ button {
     font-size: 1.5rem;
   }
 }
-
-

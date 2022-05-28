@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { BiSearch } from 'react-icons/bi'
 import { BsPerson } from 'react-icons/bs'
-import { HiOutlineMenuAlt4 } from 'react-icons/hi'
-import { AiOutlineClose } from 'react-icons/ai'
+import { FaBars, FaTimes } from 'react-icons/fa'
 import { FaFacebook, FaInstagram, FaPinterest, FaTwitter, FaYoutube } from 'react-icons/fa'
 
 import { Link } from 'react-scroll'
@@ -12,6 +11,13 @@ import './NavbarStyles.css'
 function Navbar() {
     const [nav, setNav] = useState(false)
     const handleNav = () => setNav(!nav)
+
+    const removeNavbar = () => {
+        if (window.scrollY > 650) {
+            setNav(false)
+        }
+    }
+    window.addEventListener('scroll', removeNavbar)
 
     return (
         <div name='home' className={nav ? 'navbar navbar-bg' : 'navbar'}>
@@ -30,7 +36,7 @@ function Navbar() {
                 <BsPerson className='icon' />
             </div>
             <div className="hamburger" onClick={handleNav}>
-                {!nav ? (<HiOutlineMenuAlt4 className='icon' />) : (<AiOutlineClose style={{ color: '#000' }} className='icon' />)}
+                {!nav ? (<FaBars  className='icon' />) : (<FaTimes  style={{ color: '#000' }} className='icon' />)}
 
             </div>
 

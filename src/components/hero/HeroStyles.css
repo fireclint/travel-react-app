@@ -54,10 +54,15 @@
     width: 400px;
     font-size: 1.2rem;
     font-family: 'Poppins',sans-serif;
+    padding: 0 .4rem;
 }
 
 .form input[type=text]:focus {
     outline: none;
+}
+
+.form .btn{
+    display: inline-flex;
 }
 
 @media screen and (max-width: 940px) {

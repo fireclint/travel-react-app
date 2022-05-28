@@ -18,13 +18,12 @@
     display: flex;
 }
 
-li {
+.navbar li{
     padding: 0 1rem;
 }
 
 .hamburger {
     display: none;
-    /* padding: 1rem; */
 }
 
 .mobile-menu {
@@ -34,6 +33,7 @@ li {
 .icon {
     font-size: 1.5rem;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 
@@ -47,8 +47,6 @@ li {
         left: 0;
         position: absolute;
         justify-content: space-between;
-        /* align-items: center; */
-        /* color: rgba(255, 255, 255, .95); */
         background-color: #f5f5f5;
         transition: 0.3s;
         color: #000;
@@ -86,7 +84,6 @@ li {
 
     .social-icons .icon:hover {
         transform: scale(1.5);
-        transition: 0.3s;
     }
 
     .mobile-menu button {
